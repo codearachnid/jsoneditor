@@ -5,12 +5,22 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
 }
 
-#editorContainer {
+.step {
     width: 80%;
     max-width: 800px;
-    margin: auto;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step h2 {
     text-align: center;
 }
 
@@ -37,13 +47,19 @@ button:hover {
     background-color: #0056b3;
 }
 
+#step1 textarea {
+    margin-bottom: 20px;
+}
+
 #editor {
-    margin-top: 20px;
+    width: 100%;
     text-align: left;
+    margin-top: 20px;
 }
 
 .node {
-    margin-left: 20px;
+    display: flex;
+    align-items: center;
     padding: 5px;
     border: 1px dashed transparent;
 }
@@ -64,4 +80,21 @@ button.toggle:hover {
 .dragging {
     background-color: #f1f1f1;
     border: 1px dashed #007bff;
+}
+
+#step1 button, #step2 button, #step3 button {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#step2 .node button, #step2 .node input, #step2 .node select {
+    margin-right: 10px;
+}
+
+#step2 .node {
+    margin-bottom: 10px;
+}
+
+#editor .node {
+    margin-bottom: 10px;
 }
